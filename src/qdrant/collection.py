@@ -5,3 +5,8 @@ client.create_collection(
     collection_name="test_collection",
     vectors_config=VectorParams(size=4, distance=Distance.DOT),
 )
+
+client.create_collection(
+    collection_name="color_collection",
+    vectors_config=VectorParams(size=3, distance=Distance.COSINE),
+)

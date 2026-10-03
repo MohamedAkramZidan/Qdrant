@@ -15,3 +15,5 @@ operation_info = client.upsert(
 )
 
 print(operation_info)
+
+# more example in insert.md 
