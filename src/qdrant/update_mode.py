@@ -42,12 +42,4 @@ client.upsert(
     update_mode=models.UpdateMode.UPDATE_ONLY
 )
 
-points, _ = client.scroll(
-    collection_name="color_collection",
-    limit=100,
-    with_vectors=True,
-)
-
-for point in points:
-    print("ID:", point.id)
-    print("Vector:", point.vector)
+# Qdrant normalizes vectors when using cosine similarity.
